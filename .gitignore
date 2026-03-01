@@ -1,0 +1,33 @@
+# Dependências
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE e Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.*.local
+
+# Build e distribuição
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Arquivos temporários
+*.tmp
+temp/
+
+# Backup
+*.backup
+*.bak
