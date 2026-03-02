@@ -1,14 +1,49 @@
-<!-- Updated content of index.html replacing SEU_NUMERO_WHATSAPP with 5585996823475 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Fit</title>
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <p>For inquiries, contact us at 5585996823475.</p>
-    <!-- Other content here -->
+    <header>
+        <h1>Welcome to Our Online Store</h1>
+        <div id="cart">
+            <h2>Shopping Cart (<span id="cart-count">0</span>)</h2>
+        </div>
+    </header>
+    <main>
+        <section id="products">
+            <div class="product" data-id="1">
+                <h3>Product 1</h3>
+                <p>Details about Product 1.</p>
+                <label for="sizes">Size:</label>
+                <select id="sizes">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                </select>
+                <label for="colors">Color:</label>
+                <select id="colors">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+                <button onclick="addToCart(1)">Add to Cart</button>
+                <button onclick="showModal(1)">View Details</button>
+            </div>
+            <!-- More products can be listed here -->
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Product Details</h2>
+            <p id="modal-description"></p>
+            <button id="add-to-cart-modal" onclick="addToCart(currentProductId)">Add to Cart</button>
+        </div>
+    </div>
 </body>
 </html>
